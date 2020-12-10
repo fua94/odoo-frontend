@@ -6,7 +6,9 @@
     'version':'1.0',
     'data': [
         # 'templates/assets.xml',
-        'templates/homepage.xml'
+        'templates/homepage.xml',
+        'templates/react.xml',
+        'templates/vue.xml',
     ],
     'category': 'Theme/Creative',
     'depends': [
