@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+        <record id="vue_page" model="website.page">
+            <field name="url">/minimal</field>
+            <field name="website_published">True</field>
+            <field name="name">Minimal Example</field>
+            <field name="type">qweb</field>
+            <field name="key">my_theme.minimal_example</field>
+            <field name="arch" type="xml">
+                <t name="Minimal Example" t-name="my_theme.minimal_example">
+                    <t t-call="website.layout">
+                        <div id="testComponent">
+                            <h1>Hola mundo</h1>
+                        </div>    
+                    </t>
+                </t>
+            </field>
+        </record>
+    </data>
+</odoo>

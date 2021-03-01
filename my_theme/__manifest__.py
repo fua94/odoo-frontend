@@ -1,16 +1,22 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Tutorial theme',
-    'description': 'A description for your theme.',
-    'author': 'Francisco ulloa',
+    'name': 'My Website',
+    'summary': """
+        My website testing Module
+    """,
+    'author': 'Francisco Ulloa',
     'version':'1.0',
     'data': [
         # 'templates/assets.xml',
-        'templates/homepage.xml',
+        # 'templates/homepage.xml',
+        'views/assets.xml',
         'templates/react.xml',
         'templates/vue.xml',
+        'templates/minimal.xml',
+        # Data
+        # 'data/my_theme_data.xml',
     ],
-    'category': 'Theme/Creative',
+    'category': 'Website/Creative',
     'depends': [
         'website'
     ],
