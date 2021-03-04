@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_frontend" inherit_id="website.assets_frontend">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/my_theme/static/src/js/index.js" />
+		</xpath>
+    </template>
+	<!-- <template id="assets_common_minimal_js_override" name="assets_common_minimal_js_override" inherit_id="web._assets_common_minimal_js">
+        <xpath expr="//script[@src='/web/static/lib/es6-promise/es6-promise-polyfill.js']" position="replace"/>
+        <xpath expr="//script[@src='/web/static/src/js/promise_extension.js']" position="replace"/>
+    </template>
+
+	<template id="custom_assets" name="custom_assets">
+		<script type="text/javascript" src="/web/static/src/js/services/session.js"/>
+        <script type="text/javascript" src="/web/static/src/js/public/public_env.js"/>
+        <script type="text/javascript" src="/web/static/src/js/public/public_crash_manager.js"/>
+        <script type="text/javascript" src="/web/static/src/js/public/public_notification.js"/>
+        <script type="text/javascript" src="/web/static/src/js/public/public_root.js"/>
+        <script type="text/javascript" src="/web/static/src/js/public/public_root_instance.js"/>
+        <script type="text/javascript" src="/web/static/src/js/public/public_widget.js"/>
+		
+		<script type="text/javascript" src="/website/static/src/js/set_view_track.js"/>
+        <script type="text/javascript" src="/website/static/src/js/utils.js"/>
+
+        <script type="text/javascript" src="/website/static/src/js/content/website_root.js"/>
+        <script type="text/javascript" src="/website/static/src/js/content/compatibility.js"/>
+        <script type="text/javascript" src="/website/static/src/js/content/menu.js"/>
+        <script type="text/javascript" src="/website/static/src/js/content/snippets.animation.js"/>
+	</template>
+
+	<template id="main_layout" name="main_layout" inherit_id="web.frontend_layout">
+		<xpath expr="//t[@t-call='web.conditional_assets_tests']" position="replace"/>
+		<xpath expr="//t[@t-call-assets='web.assets_common_lazy'][@t-css='false']" position="replace"/>
+		<xpath expr="//t[@t-call-assets='web.assets_frontend_lazy'][@t-css='false']" position="replace"/>
+		<xpath expr="//t[@t-call-assets='web.assets_frontend_minimal_js'][@t-css='false']" position="after">
+			<t t-call-assets="my_theme.custom_assets" t-css="false" lazy_load="True"/>
+		</xpath>
+	</template> -->
+</odoo>

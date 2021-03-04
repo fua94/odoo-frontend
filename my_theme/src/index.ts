@@ -1,10 +1,12 @@
-interface Window {
-    odoo: any;
+import {WeatherStation, TemperatureDisplay} from './patterns/observer';
+
+declare global {
+    interface Window {
+        odoo: any;
+    }
 }
 
-let odoo = window.odoo;
-
-odoo.define('bh_website.project_crm_form', function (require: any) {
+window.odoo.define('bh_website.project_crm_form', function (require: any) {
     'use strict';
 
     const publicWidget = require('web.public.widget');
@@ -18,7 +20,13 @@ odoo.define('bh_website.project_crm_form', function (require: any) {
 
             const el: HTMLElement = this.el;
 
-            el.innerHTML = `<h1>Hola amigos!</h1>`;
+            let weatherStation = new WeatherStation();
+            new TemperatureDisplay(weatherStation, el);
+
+            setInterval(() => {
+                let number = Math.floor(Math.random() * 100);
+                weatherStation.setTemperature(number);
+            }, 1000);
         }
     });
 });

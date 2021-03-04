@@ -1,5 +1,11 @@
 {
+  "scripts": {
+    "build": "yarn run rollup -c"
+  },
   "devDependencies": {
-    "@types/jquery": "^3.5.5"
+    "@types/jquery": "^3.5.5",
+    "rollup": "^1.6.0",
+    "rollup-plugin-typescript2": "^0.27.3",
+    "typescript": "^3.7.2"
   }
 }
