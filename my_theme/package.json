@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "dev": "yarn run rollup -c --watch",
     "build": "yarn run rollup -c"
   },
   "devDependencies": {
