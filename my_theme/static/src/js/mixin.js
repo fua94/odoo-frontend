@@ -1,7 +1,8 @@
 odoo.define('my_theme.mixin_test', function (require) {
     "use strict";
 
-    // my_addons/my_theme/static/src/js/mixin.js
+    // /web/static/src/js/owl_compatibility.js
+    // /web/static/tests/owl_compatibility_tests.js
 
     const { ComponentAdapter, ComponentWrapper, WidgetAdapterMixin } = require('web.OwlCompatibility');
     const { Component, tags, useState } = owl;
