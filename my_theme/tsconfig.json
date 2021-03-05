@@ -1,14 +1,11 @@
 {
     "compilerOptions": {
-        // "lib": [ "es2015", "DOM" ],
         "target": "esnext",
         "module": "esnext",
-        // "outFile" : "./static/src/js/index.js",
         "outDir": "/static/src/js",
-        // "strict": false,
         "moduleResolution": "node", 
     },
     "include": [
-        "./src/**/*.ts"
+        "app/**/*.ts"
     ]
 }

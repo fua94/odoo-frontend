@@ -1,7 +1,7 @@
 import typescript from 'rollup-plugin-typescript2';
 
 export default {
-  input: "src/index.ts",
+  input: "app/index.ts",
   output: [
     {
       file: 'static/src/js/index.js',
