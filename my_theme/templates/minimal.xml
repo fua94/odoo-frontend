@@ -9,11 +9,7 @@
             <field name="arch" type="xml">
                 <t name="Minimal Example" t-name="my_theme.minimal_example">
                     <t t-call="website.layout">
-                        <div id="testComponent">
-                            <h1>Hola mundo</h1>
-                        </div>    
-
-                        <div id="mixinComponent"/>
+                        <div id="wrapperComponent"/>
                     </t>
                 </t>
             </field>

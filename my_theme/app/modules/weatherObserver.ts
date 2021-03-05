@@ -1,6 +1,6 @@
 import {WeatherStation, TemperatureDisplay} from '../patterns/observer';
 
-window.odoo.define('bh_website.project_crm_form', function (require: any) {
+window.odoo.define('my_theme.wrapper_component', function (require: any) {
     'use strict';
 
     const { ComponentWrapper, WidgetAdapterMixin } = require('web.OwlCompatibility');
@@ -10,10 +10,11 @@ window.odoo.define('bh_website.project_crm_form', function (require: any) {
     const publicWidget = require('web.public.widget');
 
     class MyComponent extends Component {
-        state = useState({ temperature: 0 });
-
+        
         constructor() {
             super(...arguments);
+
+            this.state = useState({ temperature: 0 });
 
             let weatherStation = new WeatherStation();
             new TemperatureDisplay(weatherStation, this.state);
@@ -34,8 +35,8 @@ window.odoo.define('bh_website.project_crm_form', function (require: any) {
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>`;
 
-    publicWidget.registry.test_component = publicWidget.Widget.extend(WidgetAdapterMixin, {
-        selector: '#mixinComponent',
+    publicWidget.registry.wrapper_component = publicWidget.Widget.extend(WidgetAdapterMixin, {
+        selector: '#wrapperComponent',
         disabledInEditableMode: false,
 
         start: function() {

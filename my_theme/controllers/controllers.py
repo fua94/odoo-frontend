@@ -2,14 +2,14 @@
 from odoo import http
 from odoo.http import request
 
-from odoo.addons.website.controllers.main import Website
+# from odoo.addons.website.controllers.main import Website
 
 
-class MyThemeWebsite(Website):
-    @http.route(auth='public')
-    def index(self, **kw):
-        super(Website, self).index()
-        return request.render('my_theme.homepage')
+# class MyThemeWebsite(Website):
+#     @http.route(auth='public')
+#     def index(self, **kw):
+#         super(Website, self).index()
+#         return request.render('my_theme.homepage')
 
 
 class MyThemeController(http.Controller):
