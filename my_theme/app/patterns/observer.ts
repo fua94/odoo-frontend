@@ -37,15 +37,15 @@ export class WeatherStation implements Subject {
 // ------------------------------------------------------
 export class TemperatureDisplay implements Observer {
     private subject: Subject;
-    private el: HTMLElement;
+    private state: any;
 
-    constructor(weatherStation: Subject, el: HTMLElement) {
+    constructor(weatherStation: Subject, state: any) {
         this.subject = weatherStation;
-        this.el = el;
+        this.state = state;
         weatherStation.registerObserver(this);
     }
 
     update(temperature: number) {
-        this.el.innerHTML = `<h1>${temperature.toString()}</h1>`;
+        this.state.temperature = temperature;
     }
 }

@@ -5,6 +5,7 @@ interface IOdoo {
 declare global {
     interface Window {
         odoo: IOdoo;
+        owl: any;
     }
 }
 
